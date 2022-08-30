@@ -24,6 +24,8 @@
     <meta property="og:image" content="https://alphapizza.netlify.app/images/img3.jpg">
 
     <!-- =Meta data for SEO= -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
     <!-- custom css link -->
     <link rel="stylesheet" href="./index.css">
     <!-- favicon -->
@@ -587,6 +589,20 @@
         let date = new Date();
 
         year.innerHTML = date.getFullYear();
+
+        //PWA SCRIPT
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+            });
+            }
     </script>
 </body>
 

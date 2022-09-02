@@ -16,12 +16,12 @@ menu_toggler.addEventListener('click', function() {
 });
 
 
-var navbar = document.querySelector('.navbar');
-var NavLink = document.querySelectorAll('.navLink');
+// var navbar = document.querySelector('.navbar');
+// var NavLink = document.querySelector('a.nav_link');
 
-NavLink.addEventListener("click", function() {
-    navbar.classList.remove('active');
-});
+// NavLink.addEventListener("click", function() {
+//     navbar.classList.remove('active');
+// });
 
 // preloader
 var loader = document.getElementById('preloader');
@@ -86,7 +86,7 @@ $('.owl-theme').owlCarousel({
 // Message popup script
 
 var frm = $('#msform');
-let submissionStatus = document.querySelector('.body');
+var submissionStatus = document.querySelector('.body');
 
 frm.submit(function(e) {
     e.preventDefault();
